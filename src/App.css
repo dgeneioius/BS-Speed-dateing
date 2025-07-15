@@ -6,6 +6,11 @@ body {
   background-image: linear-gradient(to bottom, #020917, #101725);
 }
 
+#root {
+  height: 100vh;
+  width: 100vw;
+}
+
 .content {
   display: flex;
   min-height: 100vh;
