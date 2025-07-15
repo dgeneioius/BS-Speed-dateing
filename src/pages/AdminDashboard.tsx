@@ -2,14 +2,16 @@
 import { useEffect, useState } from "react";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "../firebase";
+import type { User } from "../types";
 
 export default function AdminDashboard() {
-  const [registrants, setRegistrants] = useState([]);
+  const [registrants, setRegistrants] = useState<User[]>([]);
 
   useEffect(() => {
     const fetchData = async () => {
       const querySnapshot = await getDocs(collection(db, "registrants"));
       const data = querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+      // @ts-ignore
       setRegistrants(data);
     };
     fetchData();
