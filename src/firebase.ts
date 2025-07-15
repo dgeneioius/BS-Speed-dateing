@@ -8,8 +8,10 @@ import { getAuth } from "firebase/auth"; // Import getAuth for authentication
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+
+console.log(import.meta.env.VITE_API_KEY)
 const firebaseConfig = {
-  apiKey: `${process.env.API_KEY}`,
+  apiKey: `${import.meta.env.VITE_API_KEY}`,
   authDomain: "bsspeed-dating-app.firebaseapp.com",
   projectId: "bsspeed-dating-app",
   storageBucket: "bsspeed-dating-app.firebasestorage.app",

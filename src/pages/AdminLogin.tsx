@@ -37,7 +37,7 @@ export default function AdminLogin({ onLogin } : { onLogin: Function }) {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <button className="bg-orange-500 text-white w-full p-3 rounded hover:bg-navy mt-2">
+        <button className="bg-orange text-white w-full p-3 rounded hover:bg-navy mt-2">
           Log In
         </button>
       </form>

@@ -32,7 +32,7 @@ export default function AdminDashboard() {
         </thead>
         <tbody>
           {registrants.map((r) => (
-            <tr key={r.id} className="bg-white text-navy">
+            <tr key={r.id} className="bg-cream text-navy">
               <td className="p-2 border">{r.name}</td>
               <td className="p-2 border">{r.age}</td>
               <td className="p-2 border">{r.gender}</td>
