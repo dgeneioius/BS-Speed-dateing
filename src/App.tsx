@@ -1,8 +1,8 @@
-
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import AdminLogin from "./pages/AdminLogin";
 import AdminDashboard from "./pages/AdminDashboard";
 import { useState } from "react";
+import './App.css'
 
 function App() {
   const [loggedIn, setLoggedIn] = useState(false);

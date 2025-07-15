@@ -1,14 +1,14 @@
 
-import { useState } from "react";
+import { useState, type FormEvent } from "react";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../firebase";
 
-export default function AdminLogin({ onLogin }) {
+export default function AdminLogin({ onLogin } : { onLogin: Function }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
 
-  const handleLogin = async (e) => {
+  const handleLogin = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
       await signInWithEmailAndPassword(auth, email, password);
@@ -37,7 +37,7 @@ export default function AdminLogin({ onLogin }) {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <button className="bg-orange text-white w-full p-3 rounded hover:bg-navy mt-2">
+        <button className="bg-orange-500 text-white w-full p-3 rounded hover:bg-navy mt-2">
           Log In
         </button>
       </form>
